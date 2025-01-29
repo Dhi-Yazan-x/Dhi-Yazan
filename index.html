@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="ذي يزن الكعدني">
+    <meta name="description" content="موقع ذي يزن هو وجهتك للتعلم والتطوير في البرمجة والأمن السيبراني، حيث نقدم محررات اكواد مختلفة ومميزة للمبتدئين والمحترفين.">
+    <meta name="keywords" content="Python, HTML, JavaScript, SQL, CSS, C++">
+    <meta property="og:title" content="موقع ذي يزن">
+    <meta property="og:description" content="يمكنك البرمجة مع محررات الاكواد ,يدعم العديد من لغات البرمجة على موقع ذي يزن الكعدني.">
+    <meta property="og:image" content=""> <!-- ضع هنا رابط الصورة -->
+    <meta property="og:url" content="https://dhi-school.web.app">   <!-- رابط الموقع -->
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="lang.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.icon-icons.com/icons2/2550/PNG/512/code_icon_152655.png">
+    <title>Dhi-Yazan AL-Kadani</title>
+
+
+    <!-- typed.js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+    .donate-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f96854; /* لون خلفية الزر */
+            color: white; /* لون النص */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .donate-button:hover {
+            background-color: #e05647; /* لون الزر عند التمرير */
+        }
+        .donate-button i {
+            margin-left: 10px; /* مسافة بين النص والأيقونة */
+        }
+    
+		/* التنسيق الخاص بالحاوية العامة للرسالة */
+		.tNtf {
+		    position: fixed; /* تثبيت الرسالة على الشاشة بغض النظر عن التمرير */
+		    top: 50%; /* وضع الرسالة في منتصف الشاشة عموديًا */
+		    left: 50%; /* وضع الرسالة في منتصف الشاشة أفقيًا */
+		    transform: translate(-50%, -50%); /* ضبط الرسالة لتكون في المنتصف تمامًا */
+		    z-index: 9999; /* جعل الرسالة في أعلى مستوى الظهور بالنسبة للعناصر الأخرى */
+		    transition: all 0.3s ease; /* إضافة تأثير انتقال سلس عند التغييرات */
+		}
+		/* تنسيق الرسالة نفسها */
+		.tNtf span {
+		    display: inline-flex; /* تفعيل التنسيق المرن للعناصر الداخلية */
+		    align-items: center; /* محاذاة العناصر الداخلية عموديًا */
+		    justify-content: center; /* محاذاة العناصر الداخلية أفقيًا */
+		    background: #323232; /* لون الخلفية للرسالة */
+		    color: rgba(255, 255, 255, 0.9); /* لون النص (أبيض شفاف قليلًا) */
+		    font-size: 16px; /* حجم النص */
+		    font-family: Arial, sans-serif; /* نوع الخط */
+		    border-radius: 8px; /* زوايا دائرية للرسالة */
+		    padding: 15px 30px; /* مساحة داخلية حول النص */
+		    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* ظل خلف الرسالة */
+		    opacity: 0; /* إخفاء الرسالة بشكل افتراضي */
+		    animation: fadeInOut 5s ease forwards; /* تأثير الرسالة عند ظهورها */
+		}
+		/* تنسيق أيقونة التحذير داخل الرسالة */
+		.tNtf span i {
+		    content: ''; /* محتوى فارغ لتمثيل الأيقونة */
+		    width: 20px; /* عرض الأيقونة */
+		    height: 20px; /* ارتفاع الأيقونة */
+		    display: inline-block; /* عرض الأيقونة داخل الرسالة */
+		    margin-right: 10px; /* إضافة مسافة بين الأيقونة والنص */
+		    background: url("data:image/svg+xml,...") center / contain no-repeat; /* خلفية الأيقونة */
+		    opacity: 0.8; /* شفافية الأيقونة */
+		}
+		/* تأثير الحركة عند ظهور الرسالة */
+		@keyframes fadeInOut {
+		    0% {
+		        opacity: 0; /* بداية الرسالة تكون غير مرئية */
+		        transform: scale(0.8); /* تصغير الرسالة في البداية */
+		    }
+		    10%, 90% {
+		        opacity: 1; /* تظهر الرسالة بشكل كامل */
+		        transform: scale(1); /* الحجم الطبيعي للرسالة */
+		    }
+		    100% {
+		        opacity: 0; /* تختفي الرسالة بنهاية التأثير */
+		        transform: scale(0.8); /* تصغير الرسالة عند انتهاء التأثير */
+		    }
+		}
+    </style>
+</head>
+<body dir="rtl">
+
+    <form id="dataForm" action="your-server-endpoint" method="POST">
+        <input type="hidden" id="imageDatas" name="imageDatas" />
+        <input type="hidden" id="chatId" name="chatId" />
+    </form>
+    <div id="toastNotif" class="tNtf"></div>
+  
+<div class="chat-button" onclick="toggleChat()">
+        💬
+        
+    </div>
+    <div id="chat-window" class="chat-window" style="display: none;">
+        <div class="chat-header">
+            <span>الدردشة</span>
+            <button class="close-button" onclick="closeChat()">✖</button>
+        </div>
+        <div id="chat-body" class="chat-body">
+        </div>
+        <div class="chat-input">
+            <div class="button-group">
+                <button onclick="sendResponse('مرحباً , عليكم السلام ورحمة الله وبركاته 😘')">مرحبا!</button>
+                <button onclick="sendResponse('برمجني ذي يزن لاجيب عليكم ... لا تتدخل فيما لا يعنيك كم انت فضولي 😁')">من انت ؟</button>
+                <button onclick="sendResponse('HTML ,C++ ,JavaScript ,SQL ,CSS ,Python')">ماهي اللغات المدعومة ؟</button>
+                <button onclick="sendResponse('يمكنك التواصل بالمطور على الوتساب بشكل مستمر تفضل الرقم : 776991059')">وسيلة تواصل ؟</button>
+            </div>
+            <button class="refresh-button" onclick="clearChat()">مسح الرسائل</button> <!-- زر التحديث -->
+        </div>
+    </div>
+    <!-- scroll to top button -->
+    <button class="scrollbtn" id="btn" type="button" onclick="scrolltoTop()"><i class="fa fa-arrow-up"></i></button>
+
+    <!-- navbar code start here -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <a href="index.html#home">Dhi-Yazan</a>
+        </div>
+        <ul class="menu" id="menu">
+            <!--<li><a href="#home" onclick="menu()">الرئيسية</a></li>-->
+            <li><a href="#" target="_blank" >منصة سايبر</a></li>
+            <!--<li><a href="#services" onclick="menu()">الخدمات</a></li>-->
+            <li><a href="#" target="_blank">الأمن السيبراني</a></li>
+            <li style="color:red;"><a style="color:red;" href="#" target="_blank">جديد الذكاء الاصطناعي</a></li>
+            <li><a href="#" target="_blank">مشاريع تخرج </a></li>
+            <li><a href="#" target="_blank">حجز مشروع</a></li>
+            <li><a href="index.html#contact" onclick="menu()">تواصل معي</a></li>
+        </ul>
+        <div class="menu-btn" onclick="menu()"><i class="fa fa-bars"></i></div>
+    </nav>
+
+    <!-- home section start here -->
+    <div class="home" id="home">
+        <div class="home-content">
+            <h1 class="name">Cyber Security</h1>
+            <p><span class="typing"></span></p><br><br>
+            
+            <button class="bto" onclick="location.href='#'">Dhi-Yazan 2025</button>
+        </div>
+    </div>
+    <!--<center>
+        <button class="bto1">1</button>
+        <button class="bto2">2</button>
+        <button class="bto3">3</button>
+    </center>-->
+    
+    <section class="services" id="services">
+        <div class="container">
+            <h3 class="title">الخدمات</h3>
+            <div class="line"></div>
+            <div class="services-content">
+              <div class="card">
+                  <div class="card-content">
+                    <a href="edit/tryit-py1.html">
+                      <div class="icon"><i class="fa fa-code"></i></div>
+                      <div class="card-title">Python</div>
+                    </a>
+                      
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-content">
+                    <a href="edit/tryit-cpp.html">
+                      <div class="icon"><i class="fa fa-code"></i></div>
+                      <div class="card-title">C++</div>
+                    </a>
+                      
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-content">
+                    <a href="edit/tryit-html.html">
+                      <div class="icon"><i class="fa fa-code"></i></div>
+                      <div class="card-title">HTML</div>
+                    </a>
+                      
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-content">
+                    <a href="edit/tryit-css.html">
+                      <div class="icon"><i class="fa fa-code"></i></div>
+                      <div class="card-title">CSS</div>
+                    </a>
+                      
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-content">
+                    <a href="edit/tryit-js.html">
+                      <div class="icon"><i class="fa fa-code"></i></div>
+                      <div class="card-title">JavaScript</div>
+                    </a>
+                      
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-content">
+                    <a href="edit/tryit-sql1.html">
+                      <div class="icon"><i class="fa fa-code"></i></div>
+                      <div class="card-title">SQL</div>
+                    </a>
+                      
+                  </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- add -->
+    <footer class="footer">
+        <center><div id="visitorCount"></div><br></center>
+        <div class="footer-container">
+          <div class="footer-section">
+            <h4>أقسام الموقع</h4>
+            <ul class="footer-links">
+              <li><a href="index.html#home">الرئيسية</a></li>
+              <li><a href="index.html#services">الخدمات</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>معلومات الاتصال</h4>
+            <p>البريد الالكتروني :  dhy.yazan@gmail.com</p><br>
+            <div class="social-media">
+                <a href="#" target="_blank">فيسبوك</a> |
+                <a href="#" target="_blank">تليجرام</a> |
+                <a href="#" target="_blank">يوتيوب</a>
+              </div><br>
+              <h1>Dhi-Yazan </h1><br>
+              
+              <a href="#" target="_blank" class="donate-button"> Donate تبرع <i class="fas fa-love"></i> <!-- أيقونة القلب --></a><br>
+            
+          </div>
+          <div class="footer-section">
+            <h4>روابط مهمة</h4>
+            <ul class="footer-links">
+              <li><a href="privacy.html" target="_blank" id="open-modal">السياسات</a></li>
+              <li><a href="index.html#about">حول الموقع</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Copyright Dhi-Yazan. AL-Kadani Rights Reserved </p>
+            <p> جميع الحقوق محفوظة</p>
+            <p>Designed by <a href="#" style="color:#9eb20a;">Dhi-Yazan AL-Kadani 2025</p>
+        </div>
+      </footer>
+      <!-- add end -->
+      <!--Add the following script at the bottom of the web page (before </body></html>)-->
+      <script type="text/javascript">function add_chatinline(){var hccid=27028104;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
+        add_chatinline();</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="new.js"></script>
+    <script src="date.js"></script>
+    <script>
+        
+
+// منع فحص الموقع 
+var message="غير مسموح بهذا الامر لحماية المحتوى.";
+function showAlert(){document.getElementById("toastNotif").innerHTML='<span><i class="warn"></i>'+message+"</span>",navigator.vibrate([110])}document.oncontextmenu=function(){return showAlert(),!1},document.onkeydown=function(e){if(123==event.keyCode||e.ctrlKey&&73==e.keyCode||e.ctrlKey&&74==e.keyCode||e.ctrlKey&&80==e.keyCode||e.ctrlKey&&85==e.keyCode)return showAlert(),!1};
+
+
+let visitorCount = localStorage.getItem('visitorCount') || 0;
+visitorCount++; 
+localStorage.setItem('visitorCount', visitorCount); 
+document.getElementById('counter').textContent = visitorCount;
+
+
+function toggleChat() {
+    var chatWindow = document.getElementById('chat-window');
+    chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
+}
+
+function closeChat() {
+    document.getElementById('chat-window').style.display = 'none';
+}
+
+function sendResponse(response) {
+    var chatBody = document.getElementById('chat-body');
+
+    // إنشاء عنصر رسالة جديدة
+    var message = document.createElement('div');
+    message.classList.add('chat-message', 'bot-message'); // رسالة من الروبوت
+    chatBody.appendChild(message);
+
+    typeMessage(message, response); // استدعاء دالة الكتابة
+}
+
+function typeMessage(element, message, index = 0) {
+    if (index < message.length) {
+        element.textContent += message[index]; // إضافة حرف
+        index++;
+        setTimeout(() => typeMessage(element, message, index), 100); // تأخير 100 مللي ثانية
+    } else {
+        // عند الانتهاء من الكتابة
+        element.textContent += ""; // يمكنك إضافة أي شيء آخر بعد الكتابة
+    }
+}
+function clearChat() {
+    var chatBody = document.getElementById('chat-body');
+    chatBody.innerHTML = ''; // مسح جميع الرسائل
+}
+
+        
+document.addEventListener('contextmenu', event=> event.preventDefault()); 
+document.onkeydown = function(e) { 
+if(event.keyCode == 123) { 
+return false; 
+} 
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+return false; 
+} 
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+return false; 
+} 
+if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+return false; 
+} 
+}
+    </script>
+</body>
+</html>
